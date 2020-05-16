@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pierwszy projekt springowy</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Cześć <span th:text="${imie}">Anonim</span>!</h1>
+
+<form action="/hello" method="post">
+    Imię: <input type="text" name="imie" />
+    Wiek: <input type="number" name="wiek" />
+    <input type="submit" value="Wyślij" />
+</form>
+
+<br>
+<a th:href="@{'/lab1'}">Lab 1 (łącznie)</a>
+<a th:href="@{'/lab2/zad1'}">Lab 2 - Zadanie 1</a>
+<a th:href="@{'/lab2/zad3'}">Lab 2 - Zadanie 2 & 3</a>
+<a th:href="@{'/lab3'}">Lab 3 - Zadanie 1 & 2</a>
+
+
+
+</body>
+</html>
