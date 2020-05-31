@@ -12,7 +12,7 @@
     <h1 th:text="${offer.title}"></h1>
     <h2>
         Cena:
-        <span class="text-primary" th:text="${offer.price}"></span>
+        <span class="text-primary" th:text="${#numbers.formatDecimal(offer.price, 0, 'WHITESPACE', 0,'COMMA')} + ' zł'"></span>
     </h2>
 
     <table th:object="${offer}" class="table">
@@ -32,7 +32,7 @@
             <th>Rok produkcji:</th>
             <td th:text="*{year}"></td>
             <th>Przebieg:</th>
-            <td th:text="*{#numbers.formatInteger(mileage, 0, 'WHITESPACE')}"></td>
+            <td th:text="*{#numbers.formatInteger(mileage, 0, 'WHITESPACE') + ' km'}"></td>
         </tr>
         <tr>
             <th>Pojemność i moc silnika:</th>
