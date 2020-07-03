@@ -8,7 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OgloszeniaApplication {
 
 	public static void main(String[] args) {
-		System.out.println("ch1");
+		System.out.println("ch2");
+		System.out.println("new ch2");
 		SpringApplication.run(OgloszeniaApplication.class, args);
 	}
 
